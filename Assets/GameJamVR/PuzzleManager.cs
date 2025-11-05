@@ -6,6 +6,7 @@ public class PuzzleManager : MonoBehaviour
 
     [Tooltip("Tous les SnapChecker du niveau")]
     public SnapChecker[] snapCheckers;
+    public AudioSource SonVictoire;
 
     private void Awake()
     {
@@ -25,11 +26,11 @@ public class PuzzleManager : MonoBehaviour
     private void OnPuzzleCompleted()
     {
         Debug.Log("✅ Puzzle terminé !");
-        
-            // Ici tu peux :
-            // - allumer une lumière
-            // - jouer un son
-            // - déclencher une animation ou un particle effect
+        if
+        (SonVictoire != null)
+                SonVictoire.Play();
+           
         }
     }
+
 
